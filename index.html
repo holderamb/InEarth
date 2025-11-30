@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>InEarth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- MarkerCluster CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-area">
+            <img src="logo.png" alt="Logo" class="logo-img">
+            <span class="brand-name">InEarth</span>
+        </div>
+        
+        <div class="user-controls">
+            <a href="https://www.inco.org/inco-blogs" target="_blank" class="btn-blog">Blog</a>
+            
+            <!-- Поле для ввода никнейма -->
+            <div class="input-group">
+                <span class="at-symbol">@</span>
+                <input type="text" id="usernameInput" placeholder="username" maxlength="15">
+                <button id="okBtn" class="btn-ok">OK</button>
+            </div>
+
+            <!-- Сюда подставится аватарка после ввода -->
+            <div id="currentUserDisplay" class="hidden">
+                <img id="myAvatar" src="" alt="">
+                <span id="myHandle"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Map Container -->
+    <div id="map"></div>
+
+    <!-- Firebase SDKs (Только App и Firestore, Auth больше не нужен) -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

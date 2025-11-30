@@ -1,0 +1,90 @@
+/* Основные сбросы */
+body, html { margin: 0; padding: 0; height: 100%; font-family: 'Helvetica Neue', Arial, sans-serif; overflow: hidden; }
+
+/* Хедер */
+header {
+    position: absolute; top: 0; left: 0; width: 100%; height: 60px;
+    background: #3773f5; /* Цвет верхнего меню */
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 20px; box-sizing: border-box; z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.logo-area { display: flex; align-items: center; gap: 10px; }
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+    object-fit: cover;
+}
+
+.brand-name { font-weight: bold; font-size: 1.2rem; color: #fff; letter-spacing: 0.5px; }
+
+.user-controls { display: flex; gap: 15px; align-items: center; }
+
+/* Кнопка блога */
+.btn-blog { 
+    text-decoration: none; color: #3773f5; background: #fff; 
+    font-weight: bold; padding: 8px 20px; border: none; 
+    border-radius: 20px; transition: 0.3s; 
+    font-size: 0.9rem; white-space: nowrap;
+}
+.btn-blog:hover { background: #f0f0f0; }
+
+/* Поле ввода */
+.input-group {
+    display: flex; align-items: center;
+    background: rgba(255,255,255,0.2);
+    padding: 5px 10px; border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+.at-symbol { color: #fff; font-weight: bold; margin-right: 5px; }
+#usernameInput {
+    background: transparent; border: none; outline: none;
+    color: #fff; font-weight: bold; width: 100px; font-size: 1rem;
+}
+#usernameInput::placeholder { color: rgba(255,255,255,0.6); }
+
+.btn-ok {
+    background: #fff; color: #3773f5; border: none;
+    border-radius: 50%; width: 24px; height: 24px;
+    cursor: pointer; font-weight: bold; margin-left: 5px;
+    display: flex; align-items: center; justify-content: center;
+}
+
+/* Отображение текущего юзера в шапке */
+#currentUserDisplay { display: flex; align-items: center; gap: 8px; }
+#myAvatar { width: 32px; height: 32px; border-radius: 50%; border: 2px solid #fff; }
+#myHandle { color: #fff; font-weight: bold; }
+
+.hidden { display: none !important; }
+
+/* Карта */
+#map { 
+    width: 100%; 
+    height: 100vh; 
+    background-color: #4664a3; /* Цвет воды */
+}
+
+/* Кластеры */
+.marker-cluster-small, .marker-cluster-medium, .marker-cluster-large {
+    background-color: rgba(255, 255, 255, 0.4) !important; 
+}
+.marker-cluster div {
+    background-color: #002157 !important; 
+    color: white; font-weight: bold;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+}
+
+/* Аватарки на карте */
+.custom-avatar-icon { 
+    border-radius: 50%; 
+    border: 3px solid #fff; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4); 
+    transition: transform 0.2s; background: #000;
+}
+.custom-avatar-icon:hover { transform: scale(1.1); z-index: 999; }
